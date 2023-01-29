@@ -12,7 +12,7 @@ How to use:
     <!-- addon.xml -->
     <addon id="your.addon">
         <requires>
-            <import addon="script.module.pydevd" version="4.4.0"/>
+            <import addon="script.module.pydevd"/>
         </requires>
     </addon>
     ```
@@ -28,8 +28,8 @@ How to use:
  * Then in the code under test:
 
     ```python
-    import pydevd
-    pydevd.settrace(stdoutToServer=True, stderrToServer=True)
+   import pydevd_pycharm
+   pydevd_pycharm.settrace('localhost', port=33433, stdoutToServer=True, stderrToServer=True)
     ```
  * Use Eclipse debug perspective to move through code.
 
